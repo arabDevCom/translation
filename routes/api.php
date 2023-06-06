@@ -56,6 +56,7 @@ Route::group(['prefix' => 'services'],function (){
 
 Route::get('providers/list', [ProviderController::class, 'index']);
 Route::get('cities', [GeneralController::class, 'cities']);
+Route::get('sliders', [GeneralController::class, 'sliders']);
 Route::get('translation_types', [GeneralController::class, 'translation_types']);
 
 Orion::resource('products-api', ProductsController::class);

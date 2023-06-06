@@ -25,4 +25,8 @@ class GeneralController extends Controller
     public function translation_types(){
         return $this->generalService->translations();
     }
+
+    public function sliders(){
+        return $this->generalService->sliders();
+    }
 }
