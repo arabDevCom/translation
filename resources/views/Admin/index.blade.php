@@ -17,7 +17,7 @@
                             <div class="d-flex flex-wrap">
                                 <div class="me-3">
                                     <p class="text-muted mb-2">{{__('admin.providers')}}</p>
-                                    <h5 class="mb-0">{{ App\Models\User::where(['role_id',1])->get()->count()}}</h5>
+                                    <h5 class="mb-0">{{ App\Models\User::where(['role_id'=>1])->get()->count()}}</h5>
                                 </div>
 
                                 <div class="avatar-sm ms-auto">
