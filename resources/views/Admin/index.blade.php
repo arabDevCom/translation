@@ -16,8 +16,8 @@
 
                             <div class="d-flex flex-wrap">
                                 <div class="me-3">
-                                    <p class="text-muted mb-2">{{__('admin.categories')}}</p>
-                                    <h5 class="mb-0">{{ App\Models\Category::select('id')->get()->count()}}</h5>
+                                    <p class="text-muted mb-2">{{__('admin.providers')}}</p>
+                                    <h5 class="mb-0">{{ App\Models\User::where(['role_id',1])->get()->count()}}</h5>
                                 </div>
 
                                 <div class="avatar-sm ms-auto">
@@ -31,44 +31,44 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <div class="card blog-stats-wid">
-                        <div class="card-body">
+{{--                <div class="col-lg-4">--}}
+{{--                    <div class="card blog-stats-wid">--}}
+{{--                        <div class="card-body">--}}
 
-                            <div class="d-flex flex-wrap">
-                                <div class="me-3">
-                                    <p class="text-muted mb-2">{{__('admin.products')}}</p>
-                                    <h5 class="mb-0">{{ App\Models\Product::select('id')->get()->count()}}</h5>
-                                </div>
+{{--                            <div class="d-flex flex-wrap">--}}
+{{--                                <div class="me-3">--}}
+{{--                                    <p class="text-muted mb-2">{{__('admin.products')}}</p>--}}
+{{--                                    <h5 class="mb-0">{{ App\Models\Product::select('id')->get()->count()}}</h5>--}}
+{{--                                </div>--}}
 
-                                <div class="avatar-sm ms-auto">
-                                    <div class="avatar-title bg-light rounded-circle text-primary font-size-20">
-                                        <i class="bx bxs-note"></i>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div class="avatar-sm ms-auto">--}}
+{{--                                    <div class="avatar-title bg-light rounded-circle text-primary font-size-20">--}}
+{{--                                        <i class="bx bxs-note"></i>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card blog-stats-wid">
-                        <div class="card-body">
-                            <div class="d-flex flex-wrap">
-                                <div class="me-3">
-                                    <p class="text-muted mb-2">{{__('admin.orders')}}</p>
-                                    <h5 class="mb-0">{{ App\Models\Order::select('id')->get()->count()}}</h5>
-                                </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4">--}}
+{{--                    <div class="card blog-stats-wid">--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div class="d-flex flex-wrap">--}}
+{{--                                <div class="me-3">--}}
+{{--                                    <p class="text-muted mb-2">{{__('admin.orders')}}</p>--}}
+{{--                                    <h5 class="mb-0">{{ App\Models\Order::select('id')->get()->count()}}</h5>--}}
+{{--                                </div>--}}
 
-                                <div class="avatar-sm ms-auto">
-                                    <div class="avatar-title bg-light rounded-circle text-primary font-size-20">
-                                        <i class="bx bxs-message-square-dots"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{--                                <div class="avatar-sm ms-auto">--}}
+{{--                                    <div class="avatar-title bg-light rounded-circle text-primary font-size-20">--}}
+{{--                                        <i class="bx bxs-message-square-dots"></i>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
             <!-- end row -->
 
