@@ -50,6 +50,10 @@ class User extends Authenticatable implements JWTSubject
     }
 
 
+    public function city(){
+        return $this->belongsTo(City::class,'city_id');
+    }
+
     public function getJWTIdentifier()
     {
         return $this->getKey();

@@ -21,13 +21,15 @@ class ProvidersResource extends JsonResource
                 'id'=>$this->id,
                 'name'=>$this->name,
                 'phone'=>$this->phone,
+//                'watts'=> $this->phone,
                 'email'=>$this->email,
                 'image'=>$this->image,
-                'categories'=> CategoryResource::collection($this->categories),
-                'description'=> $this->{"description_".accept_language()},
-                'advantages'=> $this->{"advantages_".accept_language()},
-                'rate'=> ($this->rate)?? round(Rate::where('provider_id',$this->id)->avg('value'),1),
-                'my_rate'=> Auth::guard('api')->user() ? Rate::where(['provider_id'=>$this->id, 'client_id' => Auth::guard('api')->user()->id])->first()?? null : null
+                'address'=>$this->address,
+                'provider_type'=>$this->provider_type,
+                'about_me'=>$this->about_me,
+                'previous_experience'=>$this->previous_experience,
+                'city'=> @$this->city->{"name_".accept_language()},
+
         ];
     }
 }

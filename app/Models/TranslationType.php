@@ -9,5 +9,7 @@ class TranslationType extends Model
 {
     use HasFactory;
 
-    protected $casts = ['name'=>'json'];
+    protected $casts = [
+        'name'=> 'json'
+    ];
 }

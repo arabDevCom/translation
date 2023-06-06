@@ -5,11 +5,11 @@ use App\Http\Controllers\Api\Client\Auth\AuthController;
 use App\Http\Controllers\Api\Client\Auth\ForgotPasswordController;
 use App\Http\Controllers\Api\Client\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Client\CategoryController;
-use App\Http\Controllers\Api\Client\HomeController;
 use App\Http\Controllers\Api\Client\ProductController;
 use App\Http\Controllers\Api\Client\ProviderController;
 use App\Http\Controllers\Api\Client\ContactController;
 use App\Http\Controllers\Api\Client\ClientOrderController;
+use App\Http\Controllers\Api\Client\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*

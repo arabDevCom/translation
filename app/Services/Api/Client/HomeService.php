@@ -7,8 +7,7 @@ use App\Http\Resources\ProductResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;;
 
-use App\Models\Category;
-use App\Models\Package;
+
 use App\Models\Product;
 use App\Models\Rate;
 use App\Models\Service;
@@ -25,10 +24,8 @@ class HomeService
 {
     use DefaultImage,GeneralTrait;
     public function index(){
-        $data['categories'] = Category::select('id','name','image')->get();
-        $data['last_add_services'] = Service::select('name','category_id','logo')->latest()->take(5)->get();
-
-        return helperJson($data, '');
+        $providers = User::where(['role_id'=>1])->get();
+        return helperJson(ProvidersResource::collection($providers), '',200);
     }
 
     public function categories(){
@@ -48,10 +45,14 @@ class HomeService
     public function search($request){
         $search_key = $request->search_key;
 //        dd($request->provider_id);
-        $services = Service::where(function ($query) use ($search_key) {
-                $query->where('name', 'LIKE', '%'.$search_key.'%');
-            })->get();
-        return helperJson(ProductResource::collection($services), '',200);
+        $providers = User::when($request->provider_type,function ($query) use($request){
+                            return $query->where('provider_type',$request->provider_type);
+                             })->when($request->translation_type_id,function ($query) use($request){
+                                return $query->where('translation_type_id',$request->translation_type_id);
+                            })->when($request->city_id,function ($query) use($request){
+                                return $query->where('city_id',$request->city_id);
+                            })->get();
+        return helperJson(ProvidersResource::collection($providers), '',200);
     }
 
     // add rate to Provider

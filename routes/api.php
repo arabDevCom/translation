@@ -3,11 +3,8 @@
 //use App\Http\Controllers\Api\Auth\Provider\AuthController;
 use App\Http\Controllers\Api\FavouriteController;
 use App\Http\Controllers\Api\GeneralController;
-use App\Http\Controllers\Api\HomeController;
 use App\Http\Controllers\Api\ProductsController;
-use App\Http\Controllers\Api\Auth\CodeCheckController;
-use App\Http\Controllers\Api\Auth\ForgotPasswordController;
-use App\Http\Controllers\Api\Auth\ResetPasswordController;
+
 use App\Http\Controllers\Api\Provider\Auth\AuthProviderController;
 use App\Http\Controllers\Api\Provider\CategoryController;
 use App\Http\Controllers\Api\Provider\OrderController;
@@ -54,16 +51,12 @@ Route::group(['prefix' => 'services'],function (){
     Route::post('store', [ServiceController::class, 'store']);
     Route::post('add-to-favourites', [FavouriteController::class, 'post_favourite']);
     Route::get('get-favourites', [FavouriteController::class, 'get_favourites']);
-    Route::post('add-rate', [HomeController::class, 'add_rate']);
 
 });
 
 Route::get('providers/list', [ProviderController::class, 'index']);
-Route::get('home', [HomeController::class, 'index']);
-Route::get('categories', [HomeController::class, 'categories']);
 Route::get('cities', [GeneralController::class, 'cities']);
 Route::get('translation_types', [GeneralController::class, 'translation_types']);
-Route::get('search', [HomeController::class, 'search']);
 
 Orion::resource('products-api', ProductsController::class);
 
