@@ -1,9 +1,5 @@
 <?php
 
-use App\Http\Controllers\Api\Client\Auth\CodeCheckController;
-use App\Http\Controllers\Api\Client\Auth\AuthController;
-use App\Http\Controllers\Api\Client\Auth\ForgotPasswordController;
-use App\Http\Controllers\Api\Client\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Client\CategoryController;
 use App\Http\Controllers\Api\Client\ProductController;
 use App\Http\Controllers\Api\Client\ProviderController;
@@ -24,9 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'client/auth'],function (){
-    Route::post('password/email',  ForgotPasswordController::class);
-    Route::post('password/code/check', CodeCheckController::class);
-    Route::post('password/reset', ResetPasswordController::class);
+
     Route::post('login',[AuthController::class, 'login']);
     Route::POST('register',[AuthController::class, 'register']);
     Route::POST('update-profile',[AuthController::class, 'update_profile']);
