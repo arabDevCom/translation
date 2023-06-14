@@ -6,6 +6,9 @@ use App\Http\Controllers\Api\GeneralController;
 use App\Http\Controllers\Api\ProductsController;
 
 use App\Http\Controllers\Api\Provider\Auth\AuthProviderController;
+use App\Http\Controllers\Api\Provider\Auth\CodeCheckController;
+use App\Http\Controllers\Api\Provider\Auth\ForgotPasswordController;
+use App\Http\Controllers\Api\Provider\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Provider\CategoryController;
 use App\Http\Controllers\Api\Provider\OrderController;
 use App\Http\Controllers\Api\Provider\ProductController;
@@ -28,9 +31,9 @@ use Orion\Facades\Orion;
 */
 
 Route::group(['prefix' => 'provider/auth'],function (){
-//    Route::post('password/email',  ForgotPasswordController::class);
-//    Route::post('password/code/check', CodeCheckController::class);
-//    Route::post('password/reset', ResetPasswordController::class);
+    Route::post('password/email',  ForgotPasswordController::class);
+    Route::post('password/code/check', CodeCheckController::class);
+    Route::post('password/reset', ResetPasswordController::class);
     Route::post('login',[AuthProviderController::class, 'login']);
     Route::POST('register',[AuthProviderController::class, 'register']);
     Route::POST('update-profile',[AuthProviderController::class, 'update_profile']);

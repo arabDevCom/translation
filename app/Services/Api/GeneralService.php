@@ -10,9 +10,7 @@ use App\Models\TranslationType;
 class GeneralService
 {
     public function cities(){
-
         $cities = City::select("id","name_".accept_language()." as name")->get();
-//        dd($cities);
         return helperJson($cities, '');
     }
 
