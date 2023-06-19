@@ -45,5 +45,5 @@ return [
     'orders'=>'Orders',
     'services'=>'Services',
     'service'=>'Service',
-
+    'contact-us'=>'Contact Us',
 ];

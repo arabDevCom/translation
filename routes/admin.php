@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\InvoiceController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
@@ -63,9 +64,13 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     ###################### Category #############################
     Route::resource('categories',CategoryController::class);
 
+    ###################### Category #############################
+    Route::resource('contact_us',ContactUsController::class);
+
     ###################### Products #############################
     Route::resource('products',ProductController::class);
 
+    Route::get('category_products/{id}',[ProductController::class,'categoryProducts'])->name('category.products');
     Route::get('category_products/{id}',[ProductController::class,'categoryProducts'])->name('category.products');
     Route::get('add_order',[OrderController::class,'store'])->name('add_order');
     #### orders ####

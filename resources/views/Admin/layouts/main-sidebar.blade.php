@@ -36,27 +36,27 @@
                 <span class="side-menu__label">المستخدمين</span>
             </a>
         </li>
+{{--        <li class="slide">--}}
+{{--            <a class="side-menu__item" data-toggle="slide" href="#">--}}
+{{--                <i class="fe fe-shopping-cart side-menu__icon"></i>--}}
+{{--                <span class="side-menu__label">{{__('admin.categories')}}</span><i class="angle fa fa-angle-left"></i>--}}
+{{--            </a>--}}
+{{--            <ul class="slide-menu">--}}
+
+{{--                <li><a href="{{ route('categories.index') }}" class="slide-item">{{__('admin.categories')}}</a></li>--}}
+{{--                <li><a href="{{ route('services.index') }}" class="slide-item">{{__('admin.services')}}</a></li>--}}
+
+{{--            </ul>--}}
+{{--        </li>--}}
+
         <li class="slide">
             <a class="side-menu__item" data-toggle="slide" href="#">
-                <i class="fe fe-shopping-cart side-menu__icon"></i>
-                <span class="side-menu__label">{{__('admin.categories')}}</span><i class="angle fa fa-angle-left"></i>
+                <i class="fe fe-message-circle side-menu__icon"></i>
+                <span class="side-menu__label">{{__('admin.contact-us')}}</span><i class="angle fa fa-angle-left"></i>
             </a>
             <ul class="slide-menu">
 
-                <li><a href="{{ route('categories.index') }}" class="slide-item">{{__('admin.categories')}}</a></li>
-                <li><a href="{{ route('services.index') }}" class="slide-item">{{__('admin.services')}}</a></li>
-
-            </ul>
-        </li>
-
-        <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="#">
-                <i class="fe fe-shopping-cart side-menu__icon"></i>
-                <span class="side-menu__label">{{__('admin.orders')}}</span><i class="angle fa fa-angle-left"></i>
-            </a>
-            <ul class="slide-menu">
-
-                <li><a href="{{ route('newOrders') }}" class="slide-item">{{__('admin.orders')}}</a></li>
+                <li><a href="{{ route('contact_us.index') }}" class="slide-item">{{__('admin.contact-us')}}</a></li>
 
             </ul>
         </li>

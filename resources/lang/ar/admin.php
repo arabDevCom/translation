@@ -45,5 +45,6 @@ return [
     'orders'=>'طلبات',
     'services'=>'خدمات',
     'service'=>'خدمة',
+    'contact-us'=>'تواصل معنا',
 
 ];

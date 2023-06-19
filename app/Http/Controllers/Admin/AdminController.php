@@ -15,10 +15,7 @@ use Yajra\DataTables\DataTables;
 class AdminController extends Controller
 {
     use PhotoTrait;
-    public function sendAdminMessage(request $request){
-        broadcast(new NewMessage('ahmed'));
-        return 'ahmed';
-    }
+
     public function index(request $request)
     {
         if($request->ajax()) {
