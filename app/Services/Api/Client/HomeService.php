@@ -55,7 +55,7 @@ class HomeService
             return $query->where('name','like',"%".$request->search_key."%");
         })->when($request->person_type,function ($query) use($request){
             return $query->where('person_type',$request->person_type);
-        })->get();
+        })->where('role_id',1)->get();
         return helperJson(ProvidersResource::collection($providers), '',200);
     }
 
