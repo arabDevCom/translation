@@ -24,6 +24,7 @@ class User extends Authenticatable implements JWTSubject
         'previous_experience',
         'city_id',
         'translation_type_id',
+        'person_type',
         'provider_type',
         'certificate_image',
         'location_image',

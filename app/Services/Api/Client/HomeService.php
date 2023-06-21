@@ -51,6 +51,8 @@ class HomeService
                                 return $query->where('translation_type_id',$request->translation_type_id);
                             })->when($request->city_id,function ($query) use($request){
                                 return $query->where('city_id',$request->city_id);
+                            })->when($request->person_type,function ($query) use($request){
+                                return $query->where('person_type',$request->person_type);
                             })->get();
         return helperJson(ProvidersResource::collection($providers), '',200);
     }
