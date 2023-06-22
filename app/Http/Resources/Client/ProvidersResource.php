@@ -18,19 +18,18 @@ class ProvidersResource extends JsonResource
     public function toArray($request)
     {
         return [
-                'id'=>$this->id,
-                'name'=>$this->name,
-                'phone'=>$this->phone,
-                'watts'=> $this->phone_code.$this->phone,
-                'email'=>$this->email,
-                'image'=>$this->image,
-                'address'=>$this->address,
-                'provider_type'=>$this->provider_type,
-                'about_me'=>$this->about_me,
-                'experience'=>$this->experience,
-                'previous_experience'=>$this->previous_experience,
-                'city'=> @$this->city->{"name_".accept_language()},
-
+            'id'=>$this->id,
+            'name'=>$this->name,
+            'phone'=>$this->phone,
+            'watts'=> $this->phone_code.$this->phone,
+            'email'=>$this->email,
+            'image'=>$this->image,
+            'address'=>$this->address,
+            'provider_type'=>$this->provider_type,
+            'about_me'=>$this->about_me,
+            'experience'=>$this->experience,
+            'previous_experience'=>$this->previous_experience,
+            'city'=> @$this->city->{"name_".accept_language()},
         ];
     }
 }
