@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/updateapp', function()
 {
-    return exec('composer dump-autoload'); // if you're not planning to access it through a route.
+    return dd(exec('composer dump-autoload')); // if you're not planning to access it through a route.
     echo 'composer dump-autoload complete';
 });
 
