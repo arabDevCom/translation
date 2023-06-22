@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\SliderAdminController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
+exec('composer dump-autoload'); // if you're not planning to access it through a route.
 
 Route::get('/change-language/{locale}', function ($locale) {
     app()->setLocale($locale);
