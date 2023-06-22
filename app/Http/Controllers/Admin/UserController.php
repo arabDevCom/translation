@@ -38,10 +38,10 @@ class UserController extends Controller
 //                        return '<span class="badge badge-danger">لا يوجد نقاط</span>';
 //                })
                 ->editColumn('user_type', function ($user) {
-                    if ($user->role_id == 1)
-                        return '<span class="badge badge-info">مقدم خدمات</span>';
+                    if ($user->provider_type == 1)
+                        return '<span class="badge badge-info">مكتب</span>';
                     else
-                        return '<span class="badge badge-info">عميل</span>';
+                        return '<span class="badge badge-info">فرد</span>';
                 })
                 ->editColumn('email', function ($user) {
                     return '<a href="mailto:' . $user->email . '">' . $user->email . '</a>';
