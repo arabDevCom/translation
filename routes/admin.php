@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderAdminController;
+use App\Http\Controllers\Admin\TranslationTypeController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     })->name('adminHome');
     #### Sliders ####
     Route::resource('sliders', SliderAdminController::class);
+    Route::resource('translation_types', TranslationTypeController::class);
     Route::POST('slider.delete', [SliderAdminController::class,'delete'])->name('sliders.delete');
     #### Admins ####
     Route::resource('admins',AdminController::class);

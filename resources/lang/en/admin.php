@@ -46,4 +46,6 @@ return [
     'services'=>'Services',
     'service'=>'Service',
     'contact-us'=>'Contact Us',
+    'details' => 'Details',
+
 ];

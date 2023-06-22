@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class TranslationType extends Model
 {
     use HasFactory;
+    protected $fillable = ['name'];
 
     protected $casts = [
         'name'=> 'json'

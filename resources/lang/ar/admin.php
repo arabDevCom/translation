@@ -28,6 +28,7 @@ return [
     'provider' => 'مقدم الخدمة',
     'category_details' => 'بيانات التصنيف',
     'product_details' => 'بيانات المنتج',
+    'details' => 'تفاصيل البيانات  ',
     'language'=>'اللغة',
     'arabic'=>'العربية',
     'english'=>'الانجليزية',
