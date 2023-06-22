@@ -16,16 +16,76 @@
                 <input type="text" class="form-control" name="user_name">
             </div>
         </div>
+
         <div class="col-6">
             <div class="form-group">
-                <label for="btn_title_ar" class="form-control-label">النقاط</label>
-                <input type="number" class="form-control" name="balance">
+                <label for="btn_title_en" class="form-control-label">رقم الهاتف</label>
+                <input type="text" class="form-control" name="phone">
+            </div>
+        </div>
+       <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">العنوان</label>
+                <input type="text" class="form-control" name="address">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">سنوات الخبرة</label>
+                <input type="text" class="form-control" name="experience">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">نبذه عني </label>
+                <textarea type="text" rows="3" class="form-control" name="about_me">  </textarea>
+            </div>
+        </div>
+          <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">الخبرة السابقة</label>
+                <textarea type="text" rows="3" class="form-control" name="previous_experience">  </textarea>
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
                 <label for="btn_title_en" class="form-control-label">الايميل</label>
                 <input type="text" class="form-control" name="email">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">نوع الترجمة</label>
+                <select class="form-control" name="translation_type_id" id="translation_type_id">
+                    @forelse($translation_types as $translation_type)
+                        <option value="{{$translation_type->id}}">{{$translation_type->name_ar}}</option>
+                    @empty
+                        <option value=""></option>
+                    @endforelse
+                </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">المدينة</label>
+                <select class="form-control" name="translation_type_id" id="city_id">
+                    @forelse($cities as $city)
+                        <option value="{{$city->id}}">{{$city->name_ar}}</option>
+                    @empty
+                        <option value=""></option>
+                    @endforelse
+                </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="btn_title_en" class="form-control-label">نوع مقدم الخدمة</label>
+                <select class="form-control" name="provider_type" id="translation_type_id">
+
+                        <option value="1">مكتب</option>
+                        <option value="2">فرد</option>
+
+                </select>
             </div>
         </div>
 

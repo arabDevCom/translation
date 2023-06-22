@@ -62,7 +62,7 @@ class HomeService
     // add rate to Provider
     public function add_rate($request){
         $rules = [
-            'service_id' => 'required|exists:services,id',
+            'provider_id' => 'required|exists:users,id',
             'value' => 'required',
             'comment' => 'nullable',
         ];
@@ -73,7 +73,7 @@ class HomeService
         $user = Auth::guard('api')->user();
         $inputs = request()->all();
         $inputs['user_id'] = $user->id;
-        $rate = Rate::where(['user_id'=>$user->id,'service_id'=>$inputs['service_id']]);
+        $rate = Rate::where(['user_id'=>$user->id,'provider_id'=>$inputs['provider_id']]);
         if($rate->count()){
             $rate = $rate->first();
             $rate->value = $inputs['value'];

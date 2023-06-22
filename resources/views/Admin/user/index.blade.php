@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">قائمة المستخدمين</h3>
-                    <p>المستخدمين المسجلين في الموقع</p>
+                    <p>المستخدمين المسجلين في التطبيق</p>
                     <div class="">
 
                     </div>
@@ -31,9 +31,9 @@
                                 <th>الصورة</th>
                                 <th>اسم المسخدم</th>
                                 <th>الايميل</th>
-                                <th>الرصيد</th>
+{{--                                <th>الرصيد</th>--}}
                                 <th>نوع المستخدم</th>
-                                <th>التقيم</th>
+{{--                                <th>التقيم</th>--}}
                                 <th class="rounded-end">العمليات</th>
                             </tr>
                             </thead>
@@ -101,9 +101,9 @@
             {data: 'image', name: 'image'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
-            {data: 'balance', name: 'balance'},
+            // {data: 'balance', name: 'balance'},
             {data: 'user_type', name: 'user_type'},
-            {data: 'rate', name: 'rate'},
+            // {data: 'rate', name: 'rate'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
         showData('{{route('users.index')}}', columns);

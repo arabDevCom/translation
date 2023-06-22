@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\City;
 use App\Models\Rate;
 use App\Models\Service;
+use App\Models\TranslationType;
 use App\Models\User;
 use App\Traits\PhotoTrait;
 use Illuminate\Http\Request;
@@ -29,12 +31,12 @@ class UserController extends Controller
                             </button>
                        ';
                 })
-                ->editColumn('balance', function ($user) {
-                    if ($user->balance != null)
-                        return $user->balance . ' نقطة ';
-                    else
-                        return '<span class="badge badge-danger">لا يوجد نقاط</span>';
-                })
+//                ->editColumn('balance', function ($user) {
+//                    if ($user->balance != null)
+//                        return $user->balance . ' نقطة ';
+//                    else
+//                        return '<span class="badge badge-danger">لا يوجد نقاط</span>';
+//                })
                 ->editColumn('user_type', function ($user) {
                     if ($user->role_id == 1)
                         return '<span class="badge badge-info">مقدم خدمات</span>';
@@ -73,7 +75,9 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('Admin.user.parts.create');
+        $data['translation_types'] =  TranslationType::all();
+        $data['cities'] =  City::all();
+        return view('Admin.user.parts.create',$data);
     }
 
 
@@ -103,8 +107,10 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('Admin.user.parts.edit', compact('user'));
+        $data['user'] = User::find($id);
+        $data['translation_types'] =  TranslationType::all();
+        $data['cities'] =  City::all();
+        return view('Admin.user.parts.edit', $data);
     }
 
 
