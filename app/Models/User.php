@@ -46,6 +46,23 @@ class User extends Authenticatable implements JWTSubject
         return isset($this->attributes['image']) ? get_file($this->attributes['image']) : "";
     }
 
+    ##  Mutators and Accessors
+    public function getCertificateImageAttribute()
+    {
+        return isset($this->attributes['certificate_image']) ? get_file($this->attributes['certificate_image']) : "";
+    }
+
+    ##  Mutators and Accessors
+    public function getlocationImageAttribute()
+    {
+        return isset($this->attributes['location_image']) ? get_file($this->attributes['location_image']) : "";
+    }
+    ##  Mutators and Accessors
+    public function getCommercialRegisterImageAttribute()
+    {
+        return isset($this->attributes['commercial_register_image']) ? get_file($this->attributes['commercial_register_image']) : "";
+    }
+
     public function categories(){
         return $this->hasMany(Category::class,'user_id');
     }
