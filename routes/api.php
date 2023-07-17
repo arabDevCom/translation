@@ -62,6 +62,8 @@ Route::get('cities', [GeneralController::class, 'cities']);
 Route::get('sliders', [GeneralController::class, 'sliders']);
 Route::get('translation_types', [GeneralController::class, 'translation_types']);
 
+Route::get('translation_languages', [GeneralController::class, 'translation_languages']);
+
 Orion::resource('products-api', ProductsController::class);
 
 

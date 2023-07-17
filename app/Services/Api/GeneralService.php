@@ -5,6 +5,7 @@ namespace App\Services\Api;
 use App\Http\Resources\TranslationResource;
 use App\Models\City;
 use App\Models\Slider;
+use App\Models\TranslationLanguage;
 use App\Models\TranslationType;
 
 class GeneralService
@@ -17,6 +18,11 @@ class GeneralService
     public function translations(){
         $translations = TranslationType::all();
         return helperJson(TranslationResource::collection($translations), '');
+    }
+
+    public function translation_languages(){
+        $translation_languages = TranslationLanguage::all();
+        return helperJson(TranslationResource::collection($translation_languages), '');
     }
 
     public function sliders(){
