@@ -27,6 +27,7 @@ class User extends Authenticatable implements JWTSubject
         'person_type',
         'provider_type',
         'certificate_image',
+        'language_id',
         'location_image',
         'commercial_register_image',
     ];
