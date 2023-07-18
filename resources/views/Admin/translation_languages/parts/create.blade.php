@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <form id="addForm" class="addForm" method="POST" enctype="multipart/form-data" action="{{route('translation_types.store')}}" >
+    <form id="addForm" class="addForm" method="POST" enctype="multipart/form-data" action="{{route('translation_languages.store')}}" >
     @csrf
         <div class="form-group">
             <label for="name" class="form-control-label"> {{__('admin.name_ar')}}</label>

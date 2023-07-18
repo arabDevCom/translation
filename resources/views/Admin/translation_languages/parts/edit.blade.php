@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <form id="updateForm" method="POST" enctype="multipart/form-data" action="{{route('translation_types.update',$find->id)}}" >
+    <form id="updateForm" method="POST" enctype="multipart/form-data" action="{{route('translation_languages.update',$find->id)}}" >
     @csrf
         @method('PUT')
         <input type="hidden" value="{{$find->id}}" name="id">
