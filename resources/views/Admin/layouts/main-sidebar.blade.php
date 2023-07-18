@@ -37,6 +37,12 @@
             </a>
         </li>
         <li class="slide">
+            <a class="side-menu__item" href="{{route('translation_languages.index')}}">
+                <i class="fe fe-user-minus side-menu__icon"></i>
+                <span class="side-menu__label">انواع لغات الترجمة</span>
+            </a>
+        </li>
+        <li class="slide">
             <a class="side-menu__item" href="{{route('translation_types.index')}}">
                 <i class="fe fe-user-minus side-menu__icon"></i>
                 <span class="side-menu__label">انواع الترجمة</span>

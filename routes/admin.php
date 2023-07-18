@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\InvoiceController;
+use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -41,6 +42,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Sliders ####
     Route::resource('sliders', SliderAdminController::class);
     Route::resource('translation_types', TranslationTypeController::class);
+    Route::resource('translation_languages', LanguageController::class);
     Route::POST('slider.delete', [SliderAdminController::class,'delete'])->name('sliders.delete');
     #### Admins ####
     Route::resource('admins',AdminController::class);
