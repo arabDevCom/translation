@@ -82,6 +82,7 @@ class AuthService
             'about_me' => 'required',
             'previous_experience' => 'required',
             'city_id' => 'required',
+            'language_id' => 'nullable',
             'translation_type_id' => 'required',
             'password' => 'required|min:6',
             'provider_type' => 'required|in:1,2',
@@ -144,6 +145,7 @@ class AuthService
         $validator = Validator::make($request->all(), [
             'phone'      => 'required|unique:users,phone,'.$user->id,
             'password'   => 'nullable',
+            'language_id' => 'nullable',
         ]);
         if ($validator->fails()) {
             $code = $this->returnCodeAccordingToInput($validator);

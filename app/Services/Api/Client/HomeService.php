@@ -49,6 +49,8 @@ class HomeService
             return $query->where('provider_type',$request->provider_type);
         })->when($request->translation_type_id,function ($query) use($request){
             return $query->where('translation_type_id',$request->translation_type_id);
+        })->when($request->language_id,function ($query) use($request){
+            return $query->where('language_id',$request->language_id);
         })->when($request->city_id,function ($query) use($request){
             return $query->where('city_id',$request->city_id);
         })->when($request->search_key,function ($query) use($request){
